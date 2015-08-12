@@ -116,9 +116,23 @@ add_action( 'widgets_init', 'techastra_zeus_widgets_init' );
 function techastra_zeus_scripts() {
 	wp_enqueue_style( 'techastra-zeus-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'techastra-zeus-screen', get_stylesheet_directory_uri() . '/inc/css/style.css' );
+
+	wp_enqueue_style( 'techastra-zeus-bootstrap', get_stylesheet_directory_uri() . '/inc/css/bootstrap.css' );
+
+	wp_enqueue_style( 'techastra-zeus-bootstrap', get_stylesheet_directory_uri() . '/inc/css/owl.carousel.css' );
+
 	wp_enqueue_script( 'techastra-zeus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'techastra-zeus-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'techastra-zeus-jquery', get_template_directory_uri() . '/js/jquery.js', array(), '', true );
+
+	wp_enqueue_script( 'techastra-zeus-owl', get_template_directory_uri() . '/js/owl.carousel.js', array(), '', true );
+
+	wp_enqueue_script( 'techastra-zeus-homebrew', get_template_directory_uri() . '/js/homebrew.js',array('jquery'));
+
+	wp_enqueue_script( 'techastra-zeus-tile', get_template_directory_uri() . '/js/tileJs.min.js', array(), '', true );
+
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -150,3 +164,36 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+//Meta Box for Events
+add_filter( 'rwmb_meta_boxes', 'techastra_zeus_register_meta_boxes' );
+function techastra_zeus_register_meta_boxes( $meta_boxes )
+{
+    $prefix = 'rw_';
+    // 1st meta box
+    $meta_boxes[] = array(
+        'id'       => 'event-icon',
+        'title'    => 'Event ICONS',
+        'pages'    => array( 'post'),
+        'context'  => 'normal',
+        'priority' => 'high',
+        'fields' => array(
+            array(
+                'name'  => 'ICON Details',
+                'desc'  => 'Format: i Tag',
+                'id'    => $prefix . 'event-icon',
+                'type'  => 'text',
+                'std'   => '',
+                'class' => '',
+                'clone' => false,
+            ),
+        )
+    );
+
+    return $meta_boxes;
+}
+
+
+
+

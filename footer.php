@@ -10,17 +10,18 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'techastra-zeus' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'techastra-zeus' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'techastra-zeus' ), 'techastra-zeus', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<div class="row margin-top-152">
+	<div class="col-md-12 bg-color-primary">
+		<div class="container">
+			<footer id="colophon" class="" role="contentinfo">
+				<div class="site-info text-center fg-color-white padding-152">
+					<h4 class="thin-header" style="margin:0;"> Techastra &copy; 2015 </h4>
+					<p>Dr. M.G.R Education & Research Institute University </p>
+				</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+		</div>
+	</div>
+</div><!-- #footer -->
 
 <?php wp_footer(); ?>
 
