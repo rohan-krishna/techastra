@@ -27,8 +27,18 @@ get_header(); ?>
 		
 		<div class="col-md-12 bg-color-primary-ascend" id="about">
 			<div class="container section-about">
-				<h2 class="text-center">About Techastra</h2>
-				<p>Techastra is the National Level symposium conducted by the students if Computer Science and Engineering / Information Technology for the students from various engineering institutions.Techastra '15 is the seventh sequel.It has been providing a platform for the budding software engineers from across the country to display their prowess in various fields of computing.</p>
+				<?php 
+
+					$args = array(
+						'post_type' => 'post',
+						'category_name' => 'about-techastra');
+					$about = new WP_Query($args);
+
+					if ( $about->have_posts() ) : while ( $about->have_posts() ) : $about->the_post(); 
+				?>
+				<h2 class="text-center"><?php the_title(); ?></h2>
+				<?php the_content(); ?>
+				<?php endwhile; endif; ?>
 			</div>
 		</div>
 
@@ -50,7 +60,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="col-md-12 event-register text-center">
-					<a href="<?php echo bloginfo('url'); ?>/events-2" class="btn-register">View More</a>
+					<a href="<?php echo bloginfo('url'); ?>/events" class="btn-register">View More</a>
 				</div>
 			</div>
 		</div>
