@@ -18,6 +18,33 @@ get_header();
 					<p class="text-center">25th August</p>
 				</div>
 				<!-- Events List -Juniors !-->
+
+				<!-- Senior Events Post Type !-->
+				<?php
+
+					$args = array(
+						'post_type' => 'post',
+						'category_name' => 'events-senior'
+						);
+					$events = new WP_Query($args);
+				?>
+				<?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
+					<?php 
+
+						$event_icon_name = get_post_meta( get_the_ID() , '_event_icon_text', true );
+
+					?>
+				<div class="col-md-12 event-desc-wrapper" id="eventDesc">
+					<div class="senior-event-desc">
+						<a href="<?php the_permalink(); ?>" id="eventLink">
+							<i class="fa <?php echo $event_icon_name ?>"></i> <h2><?php the_title(); ?></h2>
+						</a>
+					</div>
+				</div>
+				<?php endwhile; endif; ?>
+				<?php wp_reset_postdata(); ?>
+
+				<?php /*
 				
 				<!-- Algorythm Event !-->
 				<div class="col-md-12 event-desc-wrapper" id="eventDesc">
@@ -156,18 +183,52 @@ get_header();
 					</p>
 					</div>
 				</div><!-- .event-desc-wrapper !-->
-
-
+			
+			*/ ?>
+	
 			</div>
+
+
 
 			<!-- Juniors Box !-->
 
-			<div class="col-md-6">
+			<div class="col-md-6" id="juniorWrapper">
 				<div class="col-md-12 bg-color-magenta fg-color-white metro-tile">
 					<h1 class="big-header thin-header text-center padding-152">Junior Events</h1>
 					<p class="text-center">26th August</p>
 				</div>
 				<!-- Events List -Juniors !-->
+
+				<?php
+
+					$args = array(
+						'post_type' => 'post',
+						'category_name' => 'events-junior'
+						);
+					$events = new WP_Query($args);
+				?>
+				<?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
+					<?php 
+
+						$event_icon_name = get_post_meta( get_the_ID() , '_event_icon_text', true );
+
+					?>
+				<div class="col-md-12 event-desc-wrapper" id="eventDesc">
+					<div class="junior-event-desc">
+						<a href="<?php the_permalink(); ?>" id="eventLink">
+							<i class="fa <?php echo $event_icon_name ?>"></i> <h2><?php the_title(); ?></h2>
+						</a>
+					</div>
+				</div>
+				<?php endwhile; endif; ?>
+				<?php wp_reset_postdata(); ?>
+
+
+				<?php 
+
+				/*
+
+
 
 				<!-- Chess !-->
 				<div class="col-md-12 event-desc-wrapper">
@@ -288,13 +349,14 @@ get_header();
 					</p>
 					</div>
 				</div><!-- .event-desc-wrapper !-->
+				
+				*/ ?>
+
+			</div><!-- #juniorWrapper -->
+		</div><!-- .container -->
 
 
-			</div>
-		</div>
-
-
-		<div class="col-md-12">
+		<div class="col-md-12 margin-top-152">
 			<a href="<?php echo bloginfo('url' ); ?>/register" class="btn-block btn-register text-center">Register Now</a>
 		</div>
 

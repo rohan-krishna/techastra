@@ -25,7 +25,7 @@ get_header(); ?>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/office.jpg" draggable="false" class="img-office" />	
 		</div>
 		
-		<div class="col-md-12 bg-color-primary-ascend" id="about">
+		<div class="col-md-12 bg-color-material-blue fg-color-white" id="about">
 			<div class="container section-about">
 				<?php 
 
@@ -39,6 +39,7 @@ get_header(); ?>
 				<h1 class="big-header thin-header text-center"><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 				<?php endwhile; endif; ?>
+				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>
 
@@ -60,14 +61,14 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="col-md-12 event-register text-center">
-					<a href="<?php echo bloginfo('url'); ?>/events" class="btn-register">View More</a>
+					<a href="<?php echo bloginfo('url'); ?>/events" class="btn-register">Events List</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="col-md-12 margin-top-152">
 			<div class="container">
-				<div class="col-md-12" id="owlCarousel">
+				<div class="col-md-12" id="partnersOwl">
 					<?php
 						$args = array(
 							'post_type' => 'post',
@@ -82,6 +83,7 @@ get_header(); ?>
 					</div>
 
 					<?php endwhile; endif; ?>
+					<?php wp_reset_postdata(); ?>
 				</div>
 			</div>
 		</div>

@@ -120,13 +120,13 @@ function techastra_zeus_scripts() {
 
 	wp_enqueue_style( 'techastra-zeus-bootstrap', get_stylesheet_directory_uri() . '/inc/css/bootstrap.css' );
 
-	wp_enqueue_style( 'techastra-zeus-bootstrap', get_stylesheet_directory_uri() . '/inc/css/owl.carousel.css' );
+	wp_enqueue_style( 'techastra-zeus-owl-css', get_stylesheet_directory_uri() . '/inc/css/owl.carousel.css' );
 
 	wp_enqueue_script( 'techastra-zeus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'techastra-zeus-jquery', get_template_directory_uri() . '/js/jquery.js', array(), '', true );
+	wp_enqueue_script( 'techastra-zeus-jquery', get_template_directory_uri() . '/js/jquery.js' );
 
-	wp_enqueue_script( 'techastra-zeus-owl', get_template_directory_uri() . '/js/owl.carousel.js', array(), '', true );
+	wp_enqueue_script( 'techastra-zeus-owl-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery') );
 
 	wp_enqueue_script( 'techastra-zeus-homebrew', get_template_directory_uri() . '/js/homebrew.js',array('jquery'));
 
@@ -167,33 +167,52 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 //Meta Box for Events
-add_filter( 'rwmb_meta_boxes', 'techastra_zeus_register_meta_boxes' );
-function techastra_zeus_register_meta_boxes( $meta_boxes )
-{
-    $prefix = 'rw_';
-    // 1st meta box
-    $meta_boxes[] = array(
-        'id'       => 'event-icon',
-        'title'    => 'Event ICONS',
-        'pages'    => array( 'post'),
-        'context'  => 'normal',
-        'priority' => 'high',
-        'fields' => array(
-            array(
-                'name'  => 'ICON Details',
-                'desc'  => 'Format: i Tag',
-                'id'    => $prefix . 'event-icon',
-                'type'  => 'text',
-                'std'   => '',
-                'class' => '',
-                'clone' => false,
-            ),
-        )
-    );
+function add_events_icon_metabox() {
+	add_meta_box(
+		'events-icon',
+		'Events ICONS',
+		'event_icon_callback',
+		'post'
+		);
+}
+add_action('add_meta_boxes','add_events_icon_metabox');
 
-    return $meta_boxes;
+function event_icon_callback($post) {
+	
+
+	wp_nonce_field( 'event_icon_metabox' , 'event_icon_nonce' );
+
+	$value = get_post_meta( $post->ID, '_event_icon_text' , true);
+
+	echo '<label for="event_icon_text">Event ICON Name : </label><br/>';
+	echo '<input type="text" id="event_icon_text" name="event_icon_text" value="'. $value .'" placeholder="Enter Font Awesome ICON Name" size="100%" />';
 }
 
 
+function save_event_icon( $post_id ) {
 
+	if ( !current_user_can( 'edit_post' , $post_id ) ) {
+		return;
+	}
+
+	if ( ! isset( $_POST['event_icon_nonce'] ) ) {
+    	return;
+	}
+
+	if ( ! wp_verify_nonce( $_POST['event_icon_nonce'], 'event_icon_metabox' ) ) {
+    	return;
+	}
+
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+    	return;
+	}
+
+	$event_icon_name = sanitize_text_field( $_POST['event_icon_text'] );
+
+	update_post_meta( $post_id, '_event_icon_text', $event_icon_name );
+
+}
+add_action( 'save_post' , 'save_event_icon' );
+
+ 
 

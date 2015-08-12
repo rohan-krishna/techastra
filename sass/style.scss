@@ -21,6 +21,9 @@ html,body {
 body {
 	background: #FFF3E0;
 }
+h1,h2,h3,h4,p {
+	-webkit-font-smoothing : antialiased !important;
+}
 a {
 	text-decoration: none;
 
@@ -38,6 +41,7 @@ a {
 $primary-color : #EF6C00;
 $secondary-color : #f2f2f2;
 $primary-color-ascend : #FF9800;
+$material-blue : #2196F3;
 
 @mixin text-shadow {
 	text-shadow: 1px 1px 10px #333;
@@ -71,6 +75,10 @@ $primary-color-ascend : #FF9800;
 .bg-color-blue {
 	background: #2196F3;
 }
+.bg-color-material-blue {
+	background: $material-blue;
+}
+
 .fg-color-white {
 	color: #f2f2f2;
 }
@@ -110,6 +118,9 @@ a.btn-register {
 }
 .big-header {
 	font-size: 3.86em !important;
+}
+.bigger-header {
+	font-size: 6.83em !important;
 }
 .big-icon {
 	font-size: 3.64em;

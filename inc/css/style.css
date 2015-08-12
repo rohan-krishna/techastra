@@ -24,78 +24,88 @@ body {
 }
 
 /* line 24, ../../sass/style.scss */
+h1, h2, h3, h4, p {
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* line 27, ../../sass/style.scss */
 a {
   text-decoration: none;
 }
-/* line 27, ../../sass/style.scss */
+/* line 30, ../../sass/style.scss */
 a:visited {
   text-decoration: none;
 }
-/* line 30, ../../sass/style.scss */
+/* line 33, ../../sass/style.scss */
 a:hover {
   text-decoration: none;
 }
-/* line 33, ../../sass/style.scss */
+/* line 36, ../../sass/style.scss */
 a:active {
   text-decoration: none;
 }
 
-/* line 52, ../../sass/style.scss */
+/* line 56, ../../sass/style.scss */
 .margin-top-152 {
   margin-top: 1.52em;
 }
 
-/* line 56, ../../sass/style.scss */
+/* line 60, ../../sass/style.scss */
 .bg-color-primary {
   background: #ef6c00;
 }
 
-/* line 59, ../../sass/style.scss */
+/* line 63, ../../sass/style.scss */
 .bg-color-primary-ascend {
   background: #ff9800;
 }
 
-/* line 62, ../../sass/style.scss */
+/* line 66, ../../sass/style.scss */
 .bg-color-green {
   background: #4CAF50;
 }
 
-/* line 65, ../../sass/style.scss */
+/* line 69, ../../sass/style.scss */
 .bg-color-deeporange {
   background: #FF5722;
 }
 
-/* line 68, ../../sass/style.scss */
+/* line 72, ../../sass/style.scss */
 .bg-color-magenta {
   background: #1ccacd;
 }
 
-/* line 71, ../../sass/style.scss */
+/* line 75, ../../sass/style.scss */
 .bg-color-blue {
   background: #2196F3;
 }
 
-/* line 74, ../../sass/style.scss */
+/* line 78, ../../sass/style.scss */
+.bg-color-material-blue {
+  background: #2196f3;
+}
+
+/* line 82, ../../sass/style.scss */
 .fg-color-white {
   color: #f2f2f2;
 }
 
-/* line 78, ../../sass/style.scss */
+/* line 86, ../../sass/style.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 81, ../../sass/style.scss */
+/* line 89, ../../sass/style.scss */
 .padding-152 {
   padding: 1.52em;
 }
 
-/* line 84, ../../sass/style.scss */
+/* line 92, ../../sass/style.scss */
 .padding-fix-152 {
   padding: 1.52em 1.52em 0 1.52em 1.52em;
 }
 
-/* line 88, ../../sass/style.scss */
+/* line 96, ../../sass/style.scss */
 a.btn-register {
   padding: 0.52em 2.52em;
   background: #2196F3;
@@ -106,29 +116,34 @@ a.btn-register {
   border-radius: 4px;
   transition: background 0.2s linear;
 }
-/* line 98, ../../sass/style.scss */
+/* line 106, ../../sass/style.scss */
 a.btn-register:hover {
   text-decoration: none;
   background: #42A5F5;
 }
-/* line 102, ../../sass/style.scss */
+/* line 110, ../../sass/style.scss */
 a.btn-register:active {
   text-decoration: none;
   background: #1E88E5;
 }
 
-/* line 107, ../../sass/style.scss */
+/* line 115, ../../sass/style.scss */
 .thin-header {
   font-size: 2.6em;
   font-weight: 200;
 }
 
-/* line 111, ../../sass/style.scss */
+/* line 119, ../../sass/style.scss */
 .big-header {
   font-size: 3.86em !important;
 }
 
-/* line 114, ../../sass/style.scss */
+/* line 122, ../../sass/style.scss */
+.bigger-header {
+  font-size: 6.83em !important;
+}
+
+/* line 125, ../../sass/style.scss */
 .big-icon {
   font-size: 3.64em;
 }
@@ -136,26 +151,26 @@ a.btn-register:active {
 /*
 Header Design & Layouts 
 */
-/* line 120, ../../sass/style.scss */
+/* line 131, ../../sass/style.scss */
 .site-header {
   border-bottom: 1px solid #ef6c00;
 }
 
-/* line 124, ../../sass/style.scss */
+/* line 135, ../../sass/style.scss */
 .main-navigation {
   display: inline-block;
   overflow: hidden;
   float: right;
   margin-top: 1.52em;
 }
-/* line 131, ../../sass/style.scss */
+/* line 142, ../../sass/style.scss */
 .main-navigation li {
   float: left;
   list-style: none;
   list-decoration: none;
   display: inline-block;
 }
-/* line 139, ../../sass/style.scss */
+/* line 150, ../../sass/style.scss */
 .main-navigation li a {
   display: block;
   overflow: hidden;
@@ -167,18 +182,18 @@ Header Design & Layouts
   -moz-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-/* line 151, ../../sass/style.scss */
+/* line 162, ../../sass/style.scss */
 .main-navigation li a:hover {
   color: #ef6c00;
 }
-/* line 155, ../../sass/style.scss */
+/* line 166, ../../sass/style.scss */
 .main-navigation li a:hover:after {
   width: 100%;
   -webkit-transition: width 200ms ease-in-out;
   -moz-transition: width 200ms ease-in-out;
   transition: width 200ms ease-in-out;
 }
-/* line 167, ../../sass/style.scss */
+/* line 178, ../../sass/style.scss */
 .main-navigation li a:after {
   content: '';
   display: block;
@@ -195,7 +210,7 @@ Header Design & Layouts
 /*
 Landing Page
 */
-/* line 186, ../../sass/style.scss */
+/* line 197, ../../sass/style.scss */
 .img-office {
   margin: 0 auto;
   width: 100%;
@@ -204,7 +219,7 @@ Landing Page
   transform: translateY(-15em);
 }
 
-/* line 193, ../../sass/style.scss */
+/* line 204, ../../sass/style.scss */
 .section-landing {
   max-height: 450px !important;
   min-height: 200px;
@@ -213,7 +228,7 @@ Landing Page
   overflow: hidden;
 }
 
-/* line 200, ../../sass/style.scss */
+/* line 211, ../../sass/style.scss */
 .landing-text {
   display: block;
   text-align: center;
@@ -221,7 +236,7 @@ Landing Page
   letter-spacing: 0.52em;
   transform: translateY(13em);
 }
-/* line 207, ../../sass/style.scss */
+/* line 218, ../../sass/style.scss */
 .landing-text h1 {
   font-family: inherit;
   font-size: 2.8em;
@@ -229,7 +244,7 @@ Landing Page
   text-transform: uppercase;
   text-shadow: 1px 1px 10px #333;
 }
-/* line 214, ../../sass/style.scss */
+/* line 225, ../../sass/style.scss */
 .landing-text h1 span {
   display: inline-block;
   overflow: hidden;
@@ -237,7 +252,7 @@ Landing Page
   padding: 0em 0.5em;
   background: rgba(0, 0, 0, 0.7);
 }
-/* line 222, ../../sass/style.scss */
+/* line 233, ../../sass/style.scss */
 .landing-text p {
   font-weight: 700;
   text-shadow: 1px 1px 10px #333;
@@ -246,22 +261,22 @@ Landing Page
   -o-text-shadow: 1px 1px 10px #333;
 }
 
-/* line 227, ../../sass/style.scss */
+/* line 238, ../../sass/style.scss */
 .section-about {
   color: #eee;
   padding-bottom: 1.52em;
 }
-/* line 230, ../../sass/style.scss */
+/* line 241, ../../sass/style.scss */
 .section-about p {
   font-size: 1.2em;
 }
 
-/* line 238, ../../sass/style.scss */
+/* line 249, ../../sass/style.scss */
 .event-wrapper {
   background: #f0f0ea;
 }
 
-/* line 241, ../../sass/style.scss */
+/* line 252, ../../sass/style.scss */
 .event-box {
   display: block;
   text-align: center;
@@ -270,7 +285,7 @@ Landing Page
   cursor: pointer;
   transition: all 0.2s linear;
 }
-/* line 249, ../../sass/style.scss */
+/* line 260, ../../sass/style.scss */
 .event-box h1 {
   vertical-align: middle;
   font-size: 10em;
@@ -279,7 +294,7 @@ Landing Page
   -webkit-user-select: none;
   -moz-user-select: none;
 }
-/* line 257, ../../sass/style.scss */
+/* line 268, ../../sass/style.scss */
 .event-box h3 {
   color: #fff;
   font-size: 3em;
@@ -287,24 +302,24 @@ Landing Page
   -webkit-user-select: none;
   -moz-user-select: none;
 }
-/* line 264, ../../sass/style.scss */
+/* line 275, ../../sass/style.scss */
 .event-box p {
   color: #f2f2f2;
   font-weight: 400;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
-/* line 271, ../../sass/style.scss */
+/* line 282, ../../sass/style.scss */
 .event-box:hover {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* line 275, ../../sass/style.scss */
+/* line 286, ../../sass/style.scss */
 .event-register {
   padding: 1.52em;
 }
 
-/* line 278, ../../sass/style.scss */
+/* line 289, ../../sass/style.scss */
 .event-desc-wrapper {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -313,19 +328,19 @@ Landing Page
   padding: 1.52em;
   text-align: center;
 }
-/* line 286, ../../sass/style.scss */
+/* line 297, ../../sass/style.scss */
 .event-desc-wrapper h2 {
   margin: 0;
   margin-left: 3px;
   display: inline-block;
   text-transform: uppercase;
 }
-/* line 292, ../../sass/style.scss */
+/* line 303, ../../sass/style.scss */
 .event-desc-wrapper i {
   font-size: 1.52em;
 }
 
-/* line 297, ../../sass/style.scss */
+/* line 308, ../../sass/style.scss */
 .senior-event-desc a {
   display: block;
   text-decoration: none;
@@ -333,19 +348,19 @@ Landing Page
   color: #333;
   position: relative;
 }
-/* line 304, ../../sass/style.scss */
+/* line 315, ../../sass/style.scss */
 .senior-event-desc a:hover {
   color: #4CAF50;
 }
-/* line 307, ../../sass/style.scss */
+/* line 318, ../../sass/style.scss */
 .senior-event-desc a:hover:after {
   width: 50%;
 }
-/* line 310, ../../sass/style.scss */
+/* line 321, ../../sass/style.scss */
 .senior-event-desc a:active {
   top: 3px;
 }
-/* line 314, ../../sass/style.scss */
+/* line 325, ../../sass/style.scss */
 .senior-event-desc a:after {
   content: '';
   display: block;
@@ -356,7 +371,7 @@ Landing Page
   transition: width 0.4s ease-in-out;
 }
 
-/* line 326, ../../sass/style.scss */
+/* line 337, ../../sass/style.scss */
 .junior-event-desc a {
   display: block;
   text-decoration: none;
@@ -364,19 +379,19 @@ Landing Page
   color: #333;
   position: relative;
 }
-/* line 333, ../../sass/style.scss */
+/* line 344, ../../sass/style.scss */
 .junior-event-desc a:hover {
   color: #1ccacd;
 }
-/* line 336, ../../sass/style.scss */
+/* line 347, ../../sass/style.scss */
 .junior-event-desc a:hover:after {
   width: 50%;
 }
-/* line 339, ../../sass/style.scss */
+/* line 350, ../../sass/style.scss */
 .junior-event-desc a:active {
   top: 3px;
 }
-/* line 343, ../../sass/style.scss */
+/* line 354, ../../sass/style.scss */
 .junior-event-desc a:after {
   content: '';
   display: block;
@@ -400,14 +415,14 @@ Landing Page
 	transition: all 0.2s linear;
 	display: block;
 */
-/* line 367, ../../sass/style.scss */
+/* line 378, ../../sass/style.scss */
 .social-card {
   padding: 4.52em;
   line-height: 1.52em;
   text-align: center;
 }
 
-/* line 373, ../../sass/style.scss */
+/* line 384, ../../sass/style.scss */
 .site-footer {
   padding: 1.52em;
 }
