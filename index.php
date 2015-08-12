@@ -36,7 +36,7 @@ get_header(); ?>
 
 					if ( $about->have_posts() ) : while ( $about->have_posts() ) : $about->the_post(); 
 				?>
-				<h2 class="text-center"><?php the_title(); ?></h2>
+				<h1 class="big-header thin-header text-center"><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 				<?php endwhile; endif; ?>
 			</div>

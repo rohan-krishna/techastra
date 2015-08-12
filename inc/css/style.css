@@ -249,14 +249,19 @@ Landing Page
 /* line 227, ../../sass/style.scss */
 .section-about {
   color: #eee;
+  padding-bottom: 1.52em;
+}
+/* line 230, ../../sass/style.scss */
+.section-about p {
+  font-size: 1.2em;
 }
 
-/* line 233, ../../sass/style.scss */
+/* line 238, ../../sass/style.scss */
 .event-wrapper {
   background: #f0f0ea;
 }
 
-/* line 236, ../../sass/style.scss */
+/* line 241, ../../sass/style.scss */
 .event-box {
   display: block;
   text-align: center;
@@ -265,7 +270,7 @@ Landing Page
   cursor: pointer;
   transition: all 0.2s linear;
 }
-/* line 244, ../../sass/style.scss */
+/* line 249, ../../sass/style.scss */
 .event-box h1 {
   vertical-align: middle;
   font-size: 10em;
@@ -274,7 +279,7 @@ Landing Page
   -webkit-user-select: none;
   -moz-user-select: none;
 }
-/* line 252, ../../sass/style.scss */
+/* line 257, ../../sass/style.scss */
 .event-box h3 {
   color: #fff;
   font-size: 3em;
@@ -282,24 +287,24 @@ Landing Page
   -webkit-user-select: none;
   -moz-user-select: none;
 }
-/* line 259, ../../sass/style.scss */
+/* line 264, ../../sass/style.scss */
 .event-box p {
   color: #f2f2f2;
   font-weight: 400;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
-/* line 266, ../../sass/style.scss */
+/* line 271, ../../sass/style.scss */
 .event-box:hover {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* line 270, ../../sass/style.scss */
+/* line 275, ../../sass/style.scss */
 .event-register {
   padding: 1.52em;
 }
 
-/* line 273, ../../sass/style.scss */
+/* line 278, ../../sass/style.scss */
 .event-desc-wrapper {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -308,19 +313,19 @@ Landing Page
   padding: 1.52em;
   text-align: center;
 }
-/* line 281, ../../sass/style.scss */
+/* line 286, ../../sass/style.scss */
 .event-desc-wrapper h2 {
   margin: 0;
   margin-left: 3px;
   display: inline-block;
   text-transform: uppercase;
 }
-/* line 287, ../../sass/style.scss */
+/* line 292, ../../sass/style.scss */
 .event-desc-wrapper i {
   font-size: 1.52em;
 }
 
-/* line 292, ../../sass/style.scss */
+/* line 297, ../../sass/style.scss */
 .senior-event-desc a {
   display: block;
   text-decoration: none;
@@ -328,19 +333,19 @@ Landing Page
   color: #333;
   position: relative;
 }
-/* line 299, ../../sass/style.scss */
+/* line 304, ../../sass/style.scss */
 .senior-event-desc a:hover {
   color: #4CAF50;
 }
-/* line 302, ../../sass/style.scss */
+/* line 307, ../../sass/style.scss */
 .senior-event-desc a:hover:after {
   width: 50%;
 }
-/* line 305, ../../sass/style.scss */
+/* line 310, ../../sass/style.scss */
 .senior-event-desc a:active {
   top: 3px;
 }
-/* line 309, ../../sass/style.scss */
+/* line 314, ../../sass/style.scss */
 .senior-event-desc a:after {
   content: '';
   display: block;
@@ -351,7 +356,7 @@ Landing Page
   transition: width 0.4s ease-in-out;
 }
 
-/* line 321, ../../sass/style.scss */
+/* line 326, ../../sass/style.scss */
 .junior-event-desc a {
   display: block;
   text-decoration: none;
@@ -359,19 +364,19 @@ Landing Page
   color: #333;
   position: relative;
 }
-/* line 328, ../../sass/style.scss */
+/* line 333, ../../sass/style.scss */
 .junior-event-desc a:hover {
   color: #1ccacd;
 }
-/* line 331, ../../sass/style.scss */
+/* line 336, ../../sass/style.scss */
 .junior-event-desc a:hover:after {
   width: 50%;
 }
-/* line 334, ../../sass/style.scss */
+/* line 339, ../../sass/style.scss */
 .junior-event-desc a:active {
   top: 3px;
 }
-/* line 338, ../../sass/style.scss */
+/* line 343, ../../sass/style.scss */
 .junior-event-desc a:after {
   content: '';
   display: block;
@@ -395,14 +400,14 @@ Landing Page
 	transition: all 0.2s linear;
 	display: block;
 */
-/* line 362, ../../sass/style.scss */
+/* line 367, ../../sass/style.scss */
 .social-card {
   padding: 4.52em;
   line-height: 1.52em;
   text-align: center;
 }
 
-/* line 368, ../../sass/style.scss */
+/* line 373, ../../sass/style.scss */
 .site-footer {
   padding: 1.52em;
 }
