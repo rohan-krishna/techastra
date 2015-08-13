@@ -25,23 +25,35 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="top page" class="container-fluid">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'techastra-zeus' ); ?></a>
 
+<div class="pre-con">
+	<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/loader.gif" class="loader-img" draggable="false" /> 
+</div>
+
+<div id="top page" class="container-fluid">
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="col-md-12">
-				<div class="col-md-3">
-					<a href="<?php echo bloginfo('url'); ?>">
-						<h1>TECHASTRA 2015</h1>
-					</a>
+				<div class="col-md-6">
+					<a href="<?php echo bloginfo('url'); ?>" class="logo-link">	
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/tech_logo.png" draggable="false" class="tech-logo" />
+					</a>			
 				</div>
-				<div class="col-md-9">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'main-navigation' ) ); ?>
+				<div class="col-md-6 text-center" style="padding-left: 0;">
+					<a href="www.drmgrdu.ac.in" target="_blank">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/drmgralt.png" draggable="false" class="index-logo" />
+					</a>
 				</div>
 			</div>
 		</div>
-
 	</header><!-- #masthead -->
+
+	<nav class="navigation-wrapper">
+		<div class="col-md-12 bg-color-primary">
+			<div class="col-md-3 col-md-offset-4 padding-152">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'main-navigation' ) ); ?>
+			</div>
+		</div>
+	</nav>
 
 	<div id="content">

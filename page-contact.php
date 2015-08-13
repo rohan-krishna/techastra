@@ -23,18 +23,20 @@ get_header();
 				<!-- Register Form !-->
 				<?php
 
-				if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }
+				if( have_posts() ) : while ( have_posts() ) : the_post() ;
 
 				?>
+				<?php the_content(); ?>
+			<?php endwhile; endif; ?>
 			</div>
 			<div class="col-md-6 margin-top-152">
-				<a href="#" id="eventLink">
+				<a href="https://www.facebook.com/techastra2015" id="eventLink">
 				<div class="col-md-6 social-card bg-color-blue metro-tile">
 					<i class="fa fa-facebook-square fa-inverse big-icon"></i>
 				</div>
 				</a>
 
-				<a href="#" id="eventLink">
+				<a href="https://plus.google.com/u/1/108062767692202114860/about" id="eventLink">
 				<div class="col-md-6 social-card bg-color-primary metro-tile">
 					<i class="fa fa-google-plus-square fa-inverse big-icon"></i>
 				</div>

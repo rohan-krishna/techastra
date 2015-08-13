@@ -11,6 +11,12 @@ jQuery(document).ready(function($) {
 
 	var $ = jQuery;
 
+  //Pre-Loader
+  $(window).load(function() {
+    // Animate loader off screen
+    $(".pre-con").fadeOut("slow");
+  });
+
   //Owl Carousel
 	jQuery('#partnersOwl').owlCarousel({
       

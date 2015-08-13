@@ -66,6 +66,10 @@ get_header(); ?>
 			</div>
 		</div>
 
+		<div class="col-md-12">
+			
+		</div>
+
 		<div class="col-md-12 margin-top-152">
 			<div class="container">
 				<div class="col-md-12" id="partnersOwl">
