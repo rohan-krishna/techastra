@@ -24,7 +24,8 @@ get_header();
 
 					$args = array(
 						'post_type' => 'post',
-						'category_name' => 'events-senior'
+						'category_name' => 'events-senior',
+						'posts_per_page' => 15
 						);
 					$events = new WP_Query($args);
 				?>
