@@ -15,7 +15,7 @@ get_header();
 			<div class="col-md-6">
 				<div class="col-md-12 bg-color-green fg-color-white metro-tile">
 					<h1 class="big-header thin-header text-center padding-152">Senior Events</h1>
-					<p class="text-center">25th August</p>
+					<p class="text-center">25th- 26th August 2015</p>
 				</div>
 				<!-- Events List -Juniors !-->
 
@@ -25,7 +25,9 @@ get_header();
 					$args = array(
 						'post_type' => 'post',
 						'category_name' => 'events-senior',
-						'posts_per_page' => 15
+						'posts_per_page' => 15,
+						'orderby' => 'title',
+						'order' => 'DESC'
 						);
 					$events = new WP_Query($args);
 				?>
@@ -196,7 +198,7 @@ get_header();
 			<div class="col-md-6" id="juniorWrapper">
 				<div class="col-md-12 bg-color-magenta fg-color-white metro-tile">
 					<h1 class="big-header thin-header text-center padding-152">Junior Events</h1>
-					<p class="text-center">26th August</p>
+					<p class="text-center">26th August 2015</p>
 				</div>
 				<!-- Events List -Juniors !-->
 

@@ -48,12 +48,45 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<nav class="navigation-wrapper">
+	<nav class="navigation-wrapper" id="navbar">
 		<div class="col-md-12 bg-color-primary">
-			<div class="col-md-3 col-md-offset-4 padding-152">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'main-navigation' ) ); ?>
+			<div class="container">
+				<div class="col-md-6 padding-152">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'main-navigation' ) ); ?>
+				</div>
 			</div>
 		</div>
 	</nav>
+
+	<div class="row">
+		<?php
+				if ( is_home() ) {
+					$class_var = 'bg-color-blue';
+				} else {
+					$class_var = '';
+				}
+		?>
+		<div class="col-md-12 <?php echo $class_var; ?>">
+			<?php
+
+				$args = array(
+					'post_type' => 'post',
+					'category_name' => 'dept-about');
+				$dept = new WP_Query($args);
+
+				if ( $dept->have_posts() ) : while ( $dept->have_posts() ) : $dept->the_post(); 
+
+				if ( is_home() ) {
+					$fg_var = 'fg-color-white';
+				}
+
+			?>
+			<h1 class="text-center thin-header <?php echo $fg_var; ?>" style="margin-top:0;">
+				<?php the_content(); ?>
+			</h1>
+		<?php endwhile; endif; ?>
+		<?php wp_reset_postdata(); ?>
+		</div>
+	</div>
 
 	<div id="content">

@@ -50,14 +50,14 @@ get_header(); ?>
 					<div class="event-box bg-color-green">
 						<h1>12</h1>
 						<h3>Senior Events</h3>
-						<p>25th August</p>
+						<p>25th - 26th August 2015</p>
 					</div>
 				</div>
 				<div class="col-md-6 padding-152 metro-tile">
 					<div class="event-box bg-color-magenta">
 						<h1>10</h1>
 						<h3>Junior Events</h3>
-						<p>26th August</p>
+						<p>26th August 2015</p>
 					</div>
 				</div>
 				<div class="col-md-12 event-register text-center">
