@@ -38,6 +38,14 @@ a {
 	}
 }
 
+::selection {
+	background: #C5E1A5;
+}
+::-moz-selection {
+	background: #C5E1A5;
+}
+
+
 $primary-color : #EF6C00;
 $secondary-color : #f2f2f2;
 $primary-color-ascend : #FF9800;
