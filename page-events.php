@@ -27,7 +27,7 @@ get_header();
 						'category_name' => 'events-senior',
 						'posts_per_page' => 15,
 						'orderby' => 'title',
-						'order' => 'DESC'
+						'order' => 'ASC'
 						);
 					$events = new WP_Query($args);
 				?>
