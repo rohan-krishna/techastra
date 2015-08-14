@@ -360,7 +360,11 @@ get_header();
 
 
 		<div class="col-md-12 margin-top-152">
-			<a href="<?php echo bloginfo('url' ); ?>/register" class="btn-block btn-register text-center">Register Now</a>
+			<a href="http://goo.gl/forms/tBpLtI2g39" class="btn-block btn-register text-center">Register Now</a>
+		</div>
+
+		<div class="col-md-12 margin-top-152 nav-buttons text-center">
+			<a href="#navbar" class="btn btn-success">Go Up</a> &nbsp; <a href="<?php echo bloginfo('url'); ?>" class='btn btn-warning'> Home </a> 
 		</div>
 
 	</div><!-- .container !-->
