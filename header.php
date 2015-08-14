@@ -40,7 +40,7 @@
 					</a>			
 				</div>
 				<div class="col-md-6 text-center" style="padding-left: 0;">
-					<a href="www.drmgrdu.ac.in" target="_blank">
+					<a href="http://www.drmgrdu.ac.in" target="_blank">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/drmgralt.png" draggable="false" class="index-logo" />
 					</a>
 				</div>
